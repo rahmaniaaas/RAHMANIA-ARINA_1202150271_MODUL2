@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rahmaniaaas.tegalanresto.MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tegal" />
+
+    <TextView
+        android:id="@+id/pilihMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="26dp"
+        android:text="@string/pilih_menu"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/radio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pilihMenu"
+        android:layout_centerHorizontal="true"
+        android:onClick="pilihButton">
+
+        <RadioButton
+            android:id="@+id/dineIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dine_in"
+            android:onClick="pilihanPesanan"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/takeaway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dineIn"
+            android:layout_alignStart="@+id/dineIn"
+            android:layout_below="@+id/dineIn"
+            android:onClick="pilihanPesanan"
+            android:text="@string/take_away"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>
